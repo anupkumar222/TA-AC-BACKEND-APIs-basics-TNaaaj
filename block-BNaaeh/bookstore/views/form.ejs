@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Book Store</title>
+</head>
+<body>
+  <section class="form-sec container">
+    <form action="/book" method="POST">
+<!-- title  -->
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Title" name="title">
+        </div>
+      </div>
+<!-- summary  -->
+      <div class="field">
+        <label class="label">Summary</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Summary" name="summary"></textarea>
+        </div>
+      </div>
+<!-- pages  -->
+      <div class="field">
+        <label class="label">Pages</label>
+        <div class="control">
+          <input class="input" type="number" placeholder="Pages" name="pages">
+        </div>
+      </div>
+<!-- publication  -->
+      <div class="field">
+        <label class="label">Publication</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Publication" name="publication">
+        </div>
+      </div>
+<!-- cover_image_url  -->
+      <div class="field">
+        <label class="label">Cover Image Url</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Cover Image Url" name="cover_image_url">
+        </div>
+      </div>
+
+ <!-- author       -->
+ <div class="field">
+  <label class="label">Author</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="author" name="author">
+  </div>
+</div>
+
+<!-- category  -->
+      <div class="field">
+        <label class="label">Category</label>
+        <div class="control">
+          <div class="select">
+            <select name="category">
+              <option>Select category</option>
+              <option>fiction</option>
+              <option>adventure</option>
+              <option>technology</option>
+              <option>motivation</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Add</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </section>
+</body>
+</html>
