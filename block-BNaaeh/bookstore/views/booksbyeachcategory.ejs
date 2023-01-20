@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Book Store</h1>
+    </header>
+    <main>
+      <section class="filter-sec">
+        <div class="outer flex">
+          <div class="sort-title">Sort by:</div>
+          <a href="/book"  class="inner">Book Names</a >
+          <a href="/book/sortbyauthor"  class="inner">Author Name</a >
+          <a href="/book/sortbycategory"  class="inner active">Category </a >
+        </div>
+      </section>
+      <section class="button-sec">
+        <div class="buttons flex wrap">
+          <%uniqCategories.forEach(ele=>{%>
+              <a href="/book/sortbycategory/<%=ele%>" class="each-button"><%=ele%></a>
+          <%})%>
+        </div>
+        </section>
+      <section class="book-sec book-container flex flex-start wrap">
+        <%books.forEach(ele=>{%>
+            <article class="each-book flex-30 center">
+              <div class="image-container">
+                <img
+                  class="full-width"
+                  src="<%=ele.cover_image_url%>"
+                  alt="cover image"
+                />
+              </div>
+              <div class="book-details">
+                <h4><%=ele.title%></h4>
+                <h6 class="fiction"><%=ele.category%></h6>
+                <h5><span>By: </span><%=ele.authorId.name%></h5>
+              </div>
+            </article>
+          <%})%>
+      </section>
+    </main>
+  </body>
+</html>
